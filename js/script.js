@@ -68,3 +68,23 @@ const scoreMessageList = document.getElementById("scoreMessages").children
 //create a new array passingScore out of the scores array by filtering the values based on the function that returns the values that are greater than 50
 const passingScores = scores.filter(score => score > 50)
 scoreMessageList[0].innerHTML += passingScores
+
+//map each value of the array based on a function using map() 
+const  doubleScores = scores.map(score => score * 2)
+scoreMessageList[1].innerHTML += doubleScores
+
+const totalDoubleScore = doubleScores.reduce((accumulator, score) => accumulator + score)
+scoreMessageList[2].innerHTML += totalDoubleScore
+
+//所有items 会呈现竖线排列
+for(let i = 0; i < 3; i++){
+    console.log("Ta")
+    for (let j = 0; j < 2; j++){
+    console.log("Ra")
+    }
+}
+
+const coloredBoxSection = document.getElementById("coloredBoxes")
+
+for (let color of allColors){
+    coloredBoxSection.innerHTML += `<div class="box" style="background-color: ${color}"></div>` }
