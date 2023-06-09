@@ -45,7 +45,7 @@ messageList.children[8].innerHTML += allColors.join("-")
 const searchMessage = document.getElementById("colorResponse")
 function doYouHaveColor(ColorName){
     let colorIndex = allColors.indexOf(ColorName)
-    if(ColorIndex).innerHTML = "Yes, we have this color"}
+    if(ColorIndex >= 0) { searchMessage = "Yes, we have this color"}
     else{
         searchMessage.innerHTML = "No, we do not have this color"
     }
