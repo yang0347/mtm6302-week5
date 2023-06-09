@@ -40,3 +40,13 @@ const darkColors = ["darkseagreen", "darkgreen", "darkred"]
 const allColors = myColors.concat(darkColors)
 messageList.children[8].innerHTML += allColors.join("-")
 
+//searching in an array
+
+const searchMessage = document.getElementById("colorResponse")
+function doYouHaveColor(ColorName){
+    let colorIndex = allColors.indexOf(ColorName)
+    if(ColorIndex).innerHTML = "Yes, we have this color"}
+    else{
+        searchMessage.innerHTML = "No, we do not have this color"
+    }
+}
