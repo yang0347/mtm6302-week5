@@ -42,11 +42,29 @@ messageList.children[8].innerHTML += allColors.join("-")
 
 //searching in an array
 
-const searchMessage = document.getElementById("colorResponse")
-function doYouHaveColor(ColorName){
-    let colorIndex = allColors.indexOf(ColorName)
-    if(ColorIndex >= 0) { searchMessage = "Yes, we have this color"}
+/*  const searchMessage = document.getElementById("colorResponse")
+
+function doYouHaveColor (colorName) {
+    let colorIndex = allColors.indexOf(colorName)
+    if (colorIndex >= 0) {searchMessage = "Yes, we have this color"}
+    else{
+        searchMessage.innerHTML = "No, we do not have this color"
+    }
+} */
+
+
+function doYouHaveColor (colorName) {
+    let colorIndex = allColors.indexOf(colorName)
+    if (allColors.includes(colorName)) {searchMessage.innerHTML = "Yes, we have this color"}
     else{
         searchMessage.innerHTML = "No, we do not have this color"
     }
 }
+
+const scores = [43, 68, 35, 82]
+
+const scoreMessageList = document.getElementById("scoreMessages").children
+
+//create a new array passingScore out of the scores array by filtering the values based on the function that returns the values that are greater than 50
+const passingScores = scores.filter(score => score > 50)
+scoreMessageList[0].innerHTML += passingScores
