@@ -88,3 +88,4 @@ const coloredBoxSection = document.getElementById("coloredBoxes")
 
 for (let color of allColors){
     coloredBoxSection.innerHTML += `<div class="box" style="background-color: ${color}"></div>` }
+
